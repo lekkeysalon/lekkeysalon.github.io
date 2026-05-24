@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lekkey Salon Bangkok | Hair · Beauty · Confidence</title>
+  <meta name="description" content="Lekkey Salon Bangkok – Award-winning hair salon in Din Daeng. 5.0 Stars on Google. Expert coloring, keratin, straightening & styling. Open Daily 10AM–9PM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:wght@100;200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --gold-dark: #8B6914;
+      --gold-gradient: linear-gradient(135deg, #C9A84C, #E8C97A, #C9A84C);
+      --black: #080808;
+      --dark: #111111;
+      --dark2: #181818;
+      --dark3: #222222;
+      --white: #FAF8F5;
+      --gray: #888888;
+      --gray-light: #BBBBBB;
+      --red: #C0392B;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Raleway', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== UTILITY ===== */
+    .gold { color: var(--gold); }
+    .gold-text { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    .section-tag { font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.55em; text-transform: uppercase; color: var(--gold); font-weight: 300; display: block; margin-bottom: 1rem; }
+    .btn-gold { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--gold-gradient); color: var(--black); font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; border: none; cursor: pointer; transition: all 0.3s ease; border-radius: 50px; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(201,168,76,0.45); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: var(--gold); font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.95rem 2.4rem; border: 1px solid var(--gold); cursor: pointer; transition: all 0.3s ease; border-radius: 50px; }
+    .btn-outline:hover { background: rgba(201,168,76,0.08); transform: translateY(-2px); }
+    .gold-line { width: 60px; height: 1px; background: var(--gold-gradient); margin: 1.5rem auto; }
+    .gold-line-left { margin-left: 0; }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dark); }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 3rem;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      background: rgba(8,8,8,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 0.7rem 3rem;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.8rem; }
+    .nav-logo-icon { width: 44px; height: 44px; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; letter-spacing: 0.15em; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-links a { font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gray-light); font-weight: 300; transition: color 0.3s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .lang-toggle { background: none; border: 1px solid rgba(201,168,76,0.3); color: var(--gold); font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; font-weight: 300; padding: 0.45rem 1rem; cursor: pointer; transition: all 0.3s; border-radius: 50px; }
+    .lang-toggle:hover { background: rgba(201,168,76,0.1); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 1px; background: var(--gold); display: block; transition: all 0.3s; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('images/hero.jpg') center/cover no-repeat;
+      background-color: #0f0c04;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.7) 50%, rgba(8,8,8,0.85) 100%);
+    }
+    .hero-particles { position: absolute; inset: 0; overflow: hidden; }
+    .particle { position: absolute; width: 1px; height: 1px; background: var(--gold); border-radius: 50%; animation: float 8s infinite ease-in-out; opacity: 0; }
+    @keyframes float {
+      0%, 100% { opacity: 0; transform: translateY(0) scale(0); }
+      25% { opacity: 0.6; transform: translateY(-40px) scale(1.5); }
+      75% { opacity: 0.3; transform: translateY(-90px) scale(0.8); }
+    }
+    .hero-content { position: relative; z-index: 2; padding: 0 3rem; max-width: 900px; }
+    .hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.6em; text-transform: uppercase; color: var(--gold); font-weight: 200; margin-bottom: 1.8rem; animation: fadeUp 1s ease 0.2s both; display: flex; align-items: center; gap: 1.2rem; }
+    .hero-eyebrow::before { content: ''; width: 50px; height: 1px; background: var(--gold); display: block; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.2rem, 8.5vw, 7rem); font-weight: 300; line-height: 1.0; letter-spacing: -0.01em; margin-bottom: 1.8rem; animation: fadeUp 1s ease 0.4s both; }
+    .hero-title em { font-style: italic; font-weight: 400; color: var(--gold-light); }
+    .hero-tagline { font-family: 'Raleway', sans-serif; font-size: 0.82rem; color: var(--gray-light); font-weight: 200; line-height: 2; letter-spacing: 0.06em; max-width: 480px; margin-bottom: 2.8rem; animation: fadeUp 1s ease 0.6s both; }
+    .hero-ctas { display: flex; gap: 1.2rem; flex-wrap: wrap; animation: fadeUp 1s ease 0.8s both; }
+    .hero-badge {
+      position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      background: rgba(8,8,8,0.85); border: 1px solid rgba(201,168,76,0.3);
+      backdrop-filter: blur(20px);
+      padding: 2.2rem; text-align: center;
+      border-radius: 20px;
+      animation: fadeIn 1.5s ease 1s both;
+    }
+    .hero-badge-stars { font-size: 1.1rem; letter-spacing: 0.15em; color: var(--gold); }
+    .hero-badge-score { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .hero-badge-reviews { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); font-weight: 300; margin-top: 0.4rem; }
+    .hero-badge-google { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.15em; color: var(--gold); font-weight: 200; margin-top: 0.5rem; border-top: 1px solid rgba(201,168,76,0.2); padding-top: 0.5rem; }
+    .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; animation: bounce 2s infinite; }
+    .hero-scroll span { font-family: 'Raleway', sans-serif; font-size: 0.55rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gray); font-weight: 200; }
+    .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: var(--dark2);
+      border-top: 1px solid rgba(201,168,76,0.1);
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      padding: 1.5rem 3rem;
+      display: flex; justify-content: center; gap: 0; flex-wrap: wrap;
+    }
+    .stat-item { display: flex; align-items: center; gap: 1.5rem; padding: 0 2.5rem; }
+    .stat-item:not(:last-child) { border-right: 1px solid rgba(201,168,76,0.15); }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; color: var(--gold); line-height: 1; }
+    .stat-label { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray); font-weight: 200; }
+
+    /* ===== SERVICES ===== */
+    .services { padding: 8rem 3rem; max-width: 1300px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 300; line-height: 1.15; letter-spacing: 0.01em; }
+    .section-sub { font-family: 'Raleway', sans-serif; font-size: 0.78rem; color: var(--gray); font-weight: 200; letter-spacing: 0.08em; line-height: 2; margin-top: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .service-card { background: var(--dark); padding: 2.5rem 2rem; transition: all 0.4s ease; position: relative; overflow: hidden; cursor: default; border-radius: 20px; border: 1px solid rgba(201,168,76,0.08); }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold-gradient); transform: scaleX(0); transition: transform 0.4s ease; border-radius: 20px 20px 0 0; }
+    .service-card:hover { background: var(--dark2); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { width: 52px; height: 52px; margin-bottom: 1.4rem; display: block; }
+    .service-icon svg { width: 52px; height: 52px; }
+    .service-name { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 500; letter-spacing: 0.03em; color: var(--white); margin-bottom: 0.4rem; }
+    .service-name-th { font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 200; margin-bottom: 1rem; display: block; }
+    .service-desc { font-family: 'Raleway', sans-serif; font-size: 0.75rem; color: var(--gray); font-weight: 200; line-height: 1.95; letter-spacing: 0.04em; margin-bottom: 1.5rem; }
+    .service-price { display: flex; align-items: baseline; gap: 0.3rem; }
+    .price-from { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray); font-weight: 200; }
+    .price-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); }
+    .price-currency { font-size: 0.8rem; color: var(--gold); }
+    /* ฿ symbol fix — fallback font renders it huge; shrink & superscript it */
+    .baht { font-size: 0.44em; vertical-align: 0.52em; font-weight: 400; letter-spacing: 0; margin-right: 0.04em; font-family: 'Raleway', sans-serif; }
+
+    /* ===== GALLERY ===== */
+    .gallery-section { padding: 8rem 3rem; background: var(--dark); }
+    .gallery-section .section-header { max-width: 1300px; margin: 0 auto 4rem; text-align: center; }
+    .gallery-grid {
+      max-width: 1300px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 12px;
+    }
+    .gallery-item { position: relative; overflow: hidden; background: var(--dark3); cursor: pointer; border-radius: 16px; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; min-height: 220px; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.8) 0%, transparent 60%); opacity: 0; transition: opacity 0.4s ease; display: flex; align-items: flex-end; padding: 1.5rem; }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-label { font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 300; }
+    .gallery-placeholder {
+      width: 100%; min-height: 220px;
+      background: linear-gradient(135deg, var(--dark2) 0%, var(--dark3) 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.5rem; color: rgba(201,168,76,0.2);
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    }
+    .gallery-placeholder::before { content: '✦'; font-size: 1.5rem; }
+
+    /* ===== ABOUT ===== */
+    .about-section { padding: 8rem 3rem; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .about-img { position: relative; }
+    .about-img-main { width: 100%; aspect-ratio: 3/4; object-fit: cover; background: var(--dark3); }
+    .about-img-accent {
+      position: absolute; bottom: -2rem; right: -2rem;
+      width: 55%; aspect-ratio: 1;
+      border: 6px solid var(--black);
+      background: var(--dark2);
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    .about-img-accent img { width: 100%; height: 100%; object-fit: cover; }
+    .about-badge {
+      position: absolute; top: -1.5rem; left: -1.5rem;
+      background: var(--gold-gradient);
+      color: var(--black);
+      width: 90px; height: 90px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .about-badge-num { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+    .about-badge-text { font-family: 'Raleway', sans-serif; font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 300; }
+    .about-content { }
+    .about-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
+    .about-text { font-family: 'Raleway', sans-serif; font-size: 0.8rem; color: var(--gray-light); font-weight: 200; line-height: 2.1; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+    .feature-item { display: flex; gap: 0.8rem; align-items: flex-start; }
+    .feature-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .feature-text { font-family: 'Raleway', sans-serif; font-size: 0.72rem; color: var(--gray-light); font-weight: 200; letter-spacing: 0.05em; line-height: 1.7; }
+
+    /* ===== REVIEWS ===== */
+    .reviews-section { padding: 8rem 3rem; background: var(--dark); }
+    .reviews-inner { max-width: 1300px; margin: 0 auto; }
+    .reviews-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
+    .reviews-score { display: flex; align-items: center; gap: 1.5rem; }
+    .reviews-big-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .reviews-stars { display: flex; flex-direction: column; gap: 0.3rem; }
+    .stars-row { font-size: 1.2rem; letter-spacing: 0.05em; color: var(--gold); }
+    .reviews-count { font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray); font-weight: 200; }
+    .reviews-platform { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.15em; color: var(--gold); font-weight: 200; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .review-card { background: var(--dark2); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; position: relative; transition: all 0.3s ease; border-radius: 20px; }
+    .review-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .review-quote { position: absolute; top: 1.5rem; right: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: rgba(201,168,76,0.07); line-height: 1; }
+    .review-stars { font-size: 0.85rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 1rem; }
+    .review-text { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; font-weight: 400; color: var(--gray-light); line-height: 1.9; margin-bottom: 1.5rem; letter-spacing: 0.01em; }
+    .review-author { display: flex; align-items: center; gap: 0.8rem; border-top: 1px solid rgba(201,168,76,0.1); padding-top: 1rem; }
+    .review-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gold-gradient); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--black); }
+    .review-name { font-family: 'Raleway', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 400; color: var(--white); }
+    .review-date { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.1em; font-weight: 200; color: var(--gray); }
+    .review-service { font-family: 'Raleway', sans-serif; font-size: 0.58rem; color: var(--gold); letter-spacing: 0.15em; font-weight: 200; }
+
+    /* ===== COUPON BANNER ===== */
+    .coupon-banner {
+      max-width: 1300px; margin: 0 auto;
+      background: linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.05) 100%);
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 2rem 3rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+      margin-top: 4rem;
+      border-radius: 24px;
+    }
+    .coupon-text { }
+    .coupon-amount { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold); }
+    .coupon-desc { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 200; letter-spacing: 0.08em; color: var(--gray-light); margin-top: 0.3rem; }
+
+    /* ===== BOOKING ===== */
+    .booking-section { padding: 8rem 3rem; max-width: 1300px; margin: 0 auto; }
+    .booking-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
+    .booking-options { display: flex; flex-direction: column; gap: 1.5rem; }
+    .book-option { background: var(--dark); border: 1px solid rgba(201,168,76,0.15); padding: 1.8rem; display: flex; align-items: center; gap: 1.5rem; transition: all 0.3s ease; cursor: pointer; text-decoration: none; border-radius: 16px; }
+    .book-option:hover { border-color: var(--gold); background: var(--dark2); transform: translateX(8px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .book-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; overflow: hidden; }
+    .book-icon svg { width: 26px; height: 26px; display: block; }
+    .book-info { flex: 1; }
+    .book-method { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 200; margin-bottom: 0.3rem; }
+    .book-detail { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.03em; color: var(--white); }
+    .book-arrow { color: var(--gold); font-size: 1.2rem; transition: transform 0.3s; }
+    .book-option:hover .book-arrow { transform: translateX(4px); }
+    .booking-form { background: var(--dark); border: 1px solid rgba(201,168,76,0.15); padding: 2.5rem; border-radius: 20px; }
+    .form-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; letter-spacing: 0.03em; color: var(--white); margin-bottom: 0.5rem; }
+    .form-sub { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 200; letter-spacing: 0.08em; color: var(--gray); margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); font-weight: 300; display: block; margin-bottom: 0.5rem; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: var(--dark2); border: 1px solid rgba(201,168,76,0.15);
+      color: var(--white); font-family: 'Raleway', sans-serif; font-size: 0.82rem; font-weight: 300; letter-spacing: 0.05em;
+      padding: 0.85rem 1rem; outline: none; transition: border-color 0.3s;
+      border-radius: 10px;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group select option { background: var(--dark2); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* ===== CONTACT / MAP ===== */
+    .contact-section { padding: 8rem 3rem; background: var(--dark); }
+    .contact-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+    .contact-info { }
+    .contact-items { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.8rem; }
+    .contact-item { display: flex; gap: 1.2rem; }
+    .contact-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-icon svg { width: 20px; height: 20px; display: block; }
+    .contact-label { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); font-weight: 200; margin-bottom: 0.3rem; }
+    .contact-value { font-family: 'Raleway', sans-serif; font-size: 0.85rem; font-weight: 300; letter-spacing: 0.05em; color: var(--white); line-height: 1.7; }
+    .social-links { margin-top: 2.5rem; display: flex; gap: 1rem; }
+    .social-btn { width: 42px; height: 42px; border: 1px solid rgba(201,168,76,0.25); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.1rem; transition: all 0.3s; border-radius: 50%; }
+    .social-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+    .map-container { width: 100%; height: 380px; background: var(--dark2); border: 1px solid rgba(201,168,76,0.1); overflow: hidden; border-radius: 16px; }
+    .map-container iframe { width: 100%; height: 100%; border: none; filter: grayscale(0.8) contrast(1.1); }
+
+    /* ===== HOURS ===== */
+    .hours-badge { margin-top: 2rem; background: rgba(201,168,76,0.05); border: 1px solid rgba(201,168,76,0.2); padding: 1.5rem 1.8rem; border-radius: 16px; }
+    .hours-title { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); font-weight: 300; margin-bottom: 0.8rem; }
+    .hours-row { display: flex; justify-content: space-between; font-family: 'Raleway', sans-serif; font-size: 0.75rem; font-weight: 200; letter-spacing: 0.06em; padding: 0.4rem 0; border-bottom: 1px solid rgba(201,168,76,0.08); }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { color: var(--gray-light); }
+    .hours-time { color: var(--gold); font-weight: 400; letter-spacing: 0.1em; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #040404;
+      border-top: 1px solid rgba(201,168,76,0.1);
+      padding: 4rem 3rem 2rem;
+    }
+    .footer-inner { max-width: 1300px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+    .footer-brand { }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 500; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; }
+    .footer-desc { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 200; letter-spacing: 0.06em; line-height: 2; color: var(--gray); max-width: 280px; }
+    .footer-col-title { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); font-weight: 300; margin-bottom: 1.2rem; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-links a { font-family: 'Raleway', sans-serif; font-size: 0.72rem; font-weight: 200; letter-spacing: 0.08em; color: var(--gray); transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(201,168,76,0.08); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.12em; font-weight: 200; color: var(--gray); }
+    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(201,168,76,0.35); font-style: italic; font-weight: 300; letter-spacing: 0.05em; }
+
+    /* ===== LANGUAGE HIDDEN ===== */
+    .th { display: none; }
+    body.lang-th .th { display: block; }
+    body.lang-th .en { display: none; }
+    body.lang-th .th-inline { display: inline; }
+    body.lang-th .en-inline { display: none; }
+    .th-inline { display: none; }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-left.visible { opacity: 1; transform: translateX(0); }
+    .fade-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ===== MOBILE NAV OVERLAY ===== */
+    .mobile-nav { position: fixed; inset: 0; background: var(--black); z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--white); letter-spacing: 0.1em; transition: color 0.3s; }
+    .mobile-nav a:hover { color: var(--gold); }
+    .mobile-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; color: var(--gold); font-size: 2rem; cursor: pointer; }
+
+    /* ===== KEN BURNS ===== */
+    .ken-burns-wrap {
+      overflow: hidden;
+      border-radius: 16px;
+      height: 240px;
+      position: relative;
+      border: 1px solid rgba(201,168,76,0.15);
+      margin-bottom: 1rem;
+    }
+    .ken-burns-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+      animation: kenBurns 14s ease-in-out infinite;
+      transform-origin: center;
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1.00) translate(0%,   0%); }
+      20%  { transform: scale(1.08) translate(-2%,  -1%); }
+      45%  { transform: scale(1.13) translate(1.5%, -2%); }
+      70%  { transform: scale(1.07) translate(-1%,   1%); }
+      100% { transform: scale(1.00) translate(0%,   0%); }
+    }
+
+    /* ===== SOCIAL BRAND ICONS ===== */
+    .social-btn svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+    .social-btn { border-radius: 50%; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .hero-badge { display: none; }
+      .about-section { grid-template-columns: 1fr; gap: 3rem; }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      nav.scrolled { padding: 0.7rem 1.5rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-content { padding: 0 1.5rem; }
+      .services { padding: 5rem 1.5rem; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item.wide { grid-column: span 2; }
+      .gallery-item.tall { grid-row: span 1; }
+      .booking-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .reviews-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .stats-bar { gap: 1rem; }
+      .stat-item { padding: 0.5rem 1rem; }
+      .stat-item:not(:last-child) { border-right: none; }
+      .gallery-section, .reviews-section, .contact-section { padding: 5rem 1.5rem; }
+      .booking-section { padding: 5rem 1.5rem; }
+      .about-section { padding: 5rem 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .about-features { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== MOBILE NAV ====== -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" onclick="closeMobileNav()">✕</button>
+    <a href="#services" onclick="closeMobileNav()"><span class="en">Services</span><span class="th">บริการ</span></a>
+    <a href="#gallery" onclick="closeMobileNav()"><span class="en">Gallery</span><span class="th">ผลงาน</span></a>
+    <a href="#reviews" onclick="closeMobileNav()"><span class="en">Reviews</span><span class="th">รีวิว</span></a>
+    <a href="#booking" onclick="closeMobileNav()"><span class="en">Book Now</span><span class="th">จองนัด</span></a>
+    <a href="#contact" onclick="closeMobileNav()"><span class="en">Contact</span><span class="th">ติดต่อ</span></a>
+  </div>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav id="mainNav">
+    <div class="nav-logo">
+      <img src="images/logo.jpg" alt="Lekkey Salon" class="nav-logo-icon" style="width:44px;height:44px;object-fit:cover;border-radius:50%;border:1px solid rgba(201,168,76,0.4);">
+      <div class="nav-logo-text"><span class="gold-text">Lekkey</span> Salon</div>
+    </div>
+    <div class="nav-links">
+      <a href="#services"><span class="en">Services</span><span class="th">บริการ</span></a>
+      <a href="#gallery"><span class="en">Gallery</span><span class="th">ผลงาน</span></a>
+      <a href="#about"><span class="en">About</span><span class="th">เกี่ยวกับ</span></a>
+      <a href="#reviews"><span class="en">Reviews</span><span class="th">รีวิว</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="th">ติดต่อ</span></a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" onclick="toggleLang()">ไทย / EN</button>
+      <a href="#booking" class="btn-gold" style="padding: 0.6rem 1.4rem; font-size: 0.7rem;">
+        <span class="en">Book Now</span><span class="th">จองนัด</span>
+      </a>
+      <div class="hamburger" onclick="openMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="en">Bangkok's Premier Hair Studio</span>
+        <span class="th">ร้านทำผมระดับพรีเมียม กรุงเทพฯ</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="en"><em>Beautiful</em> Hair.<br>Confident <em>You.</em></span>
+        <span class="th"><em>สวยครบ</em><br>จบที่เดียว</span>
+      </h1>
+      <p class="hero-tagline">
+        <span class="en">Premium hair services at honest prices. Expert stylists, a cozy modern studio, and results that speak for themselves — in the heart of Bangkok.</span>
+        <span class="th">บริการทำผมระดับพรีเมียมในราคาที่คุ้มค่า สไตลิสต์มืออาชีพ บรรยากาศสบาย ผลลัพธ์สวยงาม ใจกลางกรุงเทพฯ</span>
+      </p>
+      <div class="hero-ctas">
+        <a href="#booking" class="btn-gold">
+          <span class="en">Book Appointment</span>
+          <span class="th">จองนัดหมาย</span>
+        </a>
+        <a href="#gallery" class="btn-outline">
+          <span class="en">View Our Work</span>
+          <span class="th">ดูผลงาน</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-stars">★★★★★</div>
+      <div class="hero-badge-score">5.0</div>
+      <div class="hero-badge-reviews">166+ Reviews</div>
+      <div class="hero-badge-google">⭐ Google Rating</div>
+    </div>
+    <div class="hero-scroll">
+      <span class="en">Scroll</span>
+      <span class="th">เลื่อนลง</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ====== STATS BAR ====== -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div>
+        <div class="stat-num">5.0</div>
+        <div class="stat-label"><span class="en">Google Stars</span><span class="th">คะแนนกูเกิล</span></div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div>
+        <div class="stat-num">166<span style="font-size:1rem">+</span></div>
+        <div class="stat-label"><span class="en">Happy Clients</span><span class="th">ลูกค้าพึงพอใจ</span></div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div>
+        <div class="stat-num" style="font-size:1.2rem; line-height:1.6">10AM–9PM</div>
+        <div class="stat-label"><span class="en">Open Daily</span><span class="th">เปิดทุกวัน</span></div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div>
+        <div class="stat-num" style="font-size:1.2rem; line-height:1.6">฿150</div>
+        <div class="stat-label"><span class="en">Services From</span><span class="th">บริการเริ่มต้นที่</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SERVICES ====== -->
+  <section class="services" id="services">
+    <div class="section-header fade-up">
+      <span class="section-tag"><span class="en">What We Offer</span><span class="th">บริการของเรา</span></span>
+      <h2 class="section-title">
+        <span class="en">Premium Services,<br><em class="gold-text">Honest Prices</em></span>
+        <span class="th">บริการระดับพรีเมียม<br><em class="gold-text">ราคาคุ้มค่า</em></span>
+      </h2>
+      <div class="gold-line"></div>
+      <p class="section-sub">
+        <span class="en">Every service is delivered with professional-grade products and expert technique.</span>
+        <span class="th">ทุกบริการใช้ผลิตภัณฑ์คุณภาพสูงและเทคนิคมืออาชีพ</span>
+      </p>
+    </div>
+    <div class="services-grid fade-up">
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- elegant scissors -->
+            <circle cx="13" cy="14" r="5.5" fill="none" stroke="url(#g1)" stroke-width="2"/>
+            <circle cx="13" cy="38" r="5.5" fill="none" stroke="url(#g1)" stroke-width="2"/>
+            <circle cx="13" cy="14" r="2" fill="url(#g1)"/>
+            <circle cx="13" cy="38" r="2" fill="url(#g1)"/>
+            <line x1="17.5" y1="17.5" x2="43" y2="36" stroke="url(#g1)" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="17.5" y1="34.5" x2="43" y2="16" stroke="url(#g1)" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="27" cy="26" r="2.5" fill="url(#g1)" opacity="0.6"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Haircut & Styling</span><span class="th">ตัดผม & สไตล์</span></div>
+        <span class="service-name-th en">ตัดผม / สไตล์</span>
+        <span class="service-name-th th">Women's Cut</span>
+        <p class="service-desc"><span class="en">Precision cuts and styling tailored to your face shape and lifestyle. For women, men, and kids.</span><span class="th">ตัดผมที่เหมาะกับรูปหน้าและไลฟ์สไตล์ของคุณ สำหรับหญิง ชาย และเด็ก</span></p>
+        <div class="service-price">
+          <span class="price-from"><span class="en">From</span><span class="th">เริ่มต้น</span></span>
+          <span class="price-num">฿300</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- paint brush with color drop -->
+            <rect x="23" y="6" width="6" height="20" rx="3" fill="url(#g2)"/>
+            <rect x="22" y="24" width="8" height="10" rx="2" fill="url(#g2)" opacity="0.7"/>
+            <path d="M24 34 Q26 42 26 44 Q26 42 28 34 Z" fill="url(#g2)"/>
+            <!-- color swatches -->
+            <circle cx="10" cy="38" r="5" fill="url(#g2)" opacity="0.9"/>
+            <circle cx="22" cy="42" r="4" fill="#E8C97A" opacity="0.7"/>
+            <circle cx="34" cy="40" r="4.5" fill="#C9A84C" opacity="0.6"/>
+            <circle cx="44" cy="35" r="3.5" fill="url(#g2)" opacity="0.5"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Hair Coloring</span><span class="th">ทำสีผม</span></div>
+        <span class="service-name-th en">ทำสี / ย้อมผม</span>
+        <span class="service-name-th th">Color / Dye</span>
+        <p class="service-desc"><span class="en">Full color, ombre, balayage, highlights — all without bleaching damage, starting at just ฿999.</span><span class="th">สีเต็มหัว, ออมเบร้, บาแลยาจ, ไฮไลต์ โดยไม่ต้องฟอก เริ่มที่ ฿999</span></p>
+        <div class="service-price">
+          <span class="price-from"><span class="en">From</span><span class="th">เริ่มต้น</span></span>
+          <span class="price-num">฿999</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- silky smooth hair strands with sparkle -->
+            <path d="M10 8 Q18 20 10 32 Q18 44 10 50" fill="none" stroke="url(#g3)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M18 6 Q26 18 18 30 Q26 42 18 48" fill="none" stroke="url(#g3)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M26 8 Q34 20 26 32 Q34 44 26 50" fill="none" stroke="url(#g3)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M34 10 Q42 22 34 34 Q42 46 34 50" fill="none" stroke="url(#g3)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <!-- sparkle star -->
+            <path d="M43 8 L44.2 11.8 L48 13 L44.2 14.2 L43 18 L41.8 14.2 L38 13 L41.8 11.8 Z" fill="url(#g3)"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Keratin Treatment</span><span class="th">เคราตินสด / ยืดเคราติน</span></div>
+        <span class="service-name-th en">เคราติน</span>
+        <span class="service-name-th th">Keratin</span>
+        <p class="service-desc"><span class="en">Fresh keratin and keratin straightening for silky-smooth, frizz-free hair that lasts for months.</span><span class="th">เคราตินสดและยืดเคราตินเพื่อผมเรียบลื่น ไม่ฟูง ยาวนานหลายเดือน</span></p>
+        <div class="service-price">
+          <span class="price-from"><span class="en">From</span><span class="th">เริ่มต้น</span></span>
+          <span class="price-num">฿1,599</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- flat iron straightener -->
+            <rect x="8" y="8" width="36" height="12" rx="5" fill="url(#g4)"/>
+            <rect x="8" y="22" width="36" height="12" rx="5" fill="url(#g4)" opacity="0.8"/>
+            <!-- hair strands going through -->
+            <line x1="16" y1="6" x2="16" y2="36" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+            <line x1="22" y1="6" x2="22" y2="36" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+            <line x1="28" y1="6" x2="28" y2="36" stroke="rgba(201,168,76,0.3)" stroke-width="1.5"/>
+            <!-- straight lines coming out = result -->
+            <line x1="12" y1="38" x2="40" y2="38" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="12" y1="43" x2="40" y2="43" stroke="url(#g4)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <line x1="14" y1="48" x2="38" y2="48" stroke="url(#g4)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Straightening</span><span class="th">ดัดถาวร / ยืดผม</span></div>
+        <span class="service-name-th en">ดัดถาวร</span>
+        <span class="service-name-th th">Permanent Wave</span>
+        <p class="service-desc"><span class="en">Permanent straightening for lasting results — smooth, manageable hair from root to tip.</span><span class="th">ยืดผมถาวรผลลัพธ์ยาวนาน ผมเรียบง่ายต่อการดูแลตลอดวัน</span></p>
+        <div class="service-price">
+          <span class="price-from"><span class="en">From</span><span class="th">เริ่มต้น</span></span>
+          <span class="price-num">฿1,599</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- lotus / spa drop -->
+            <path d="M26 46 Q14 36 14 24 Q14 14 26 10 Q38 14 38 24 Q38 36 26 46Z" fill="none" stroke="url(#g5)" stroke-width="2"/>
+            <path d="M26 46 Q10 30 12 18 Q20 8 26 10" fill="none" stroke="url(#g5)" stroke-width="1.5" opacity="0.6"/>
+            <path d="M26 46 Q42 30 40 18 Q32 8 26 10" fill="none" stroke="url(#g5)" stroke-width="1.5" opacity="0.6"/>
+            <!-- inner drop -->
+            <ellipse cx="26" cy="28" rx="5" ry="8" fill="url(#g5)" opacity="0.5"/>
+            <!-- sparkle dots -->
+            <circle cx="12" cy="12" r="1.5" fill="url(#g5)"/>
+            <circle cx="40" cy="10" r="1.5" fill="url(#g5)"/>
+            <circle cx="8" cy="28" r="1.2" fill="url(#g5)" opacity="0.6"/>
+            <circle cx="44" cy="26" r="1.2" fill="url(#g5)" opacity="0.6"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Nano Spa Treatment</span><span class="th">สปาโนโนเชื่อมแกน</span></div>
+        <span class="service-name-th en">นาโน สปา</span>
+        <span class="service-name-th th">Nano Spa</span>
+        <p class="service-desc"><span class="en">Deep nano spa bonding treatment — restores moisture, strengthens the hair shaft, and adds brilliant shine.</span><span class="th">สปาโนโนเพื่อฟื้นฟูความชุ่มชื้น เสริมความแข็งแรงของเส้นผม และเพิ่มความเงางาม</span></p>
+        <div class="service-price">
+          <span class="price-num">฿599</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- brush applicator stick above cap -->
+            <rect x="25" y="2" width="2" height="5" rx="1" fill="url(#g6)"/>
+            <!-- flat cosmetic cap -->
+            <rect x="18" y="7" width="16" height="8" rx="4" fill="url(#g6)"/>
+            <!-- narrow neck -->
+            <rect x="23" y="14" width="6" height="7" fill="url(#g6)" opacity="0.9"/>
+            <!-- bottle body — wider, rounded at bottom -->
+            <path d="M17 21 L17 42 Q17 48 26 48 Q35 48 35 42 L35 21 Z" fill="url(#g6)"/>
+            <!-- single clean highlight stripe -->
+            <rect x="20.5" y="23" width="3" height="20" rx="1.5" fill="rgba(255,255,255,0.22)"/>
+            <!-- polish drip from brush -->
+            <path d="M25 7 Q26 10 26 12" stroke="url(#g6)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Gel Nails</span><span class="th">ทาเจล / เล็บเจล</span></div>
+        <span class="service-name-th en">ทาเจล</span>
+        <span class="service-name-th th">Gel Polish</span>
+        <p class="service-desc"><span class="en">Long-lasting gel nail polish in a huge range of colours. Gentle on your nails, stunning on your hands.</span><span class="th">สีเจลยาวนาน หลากหลายสี อ่อนโยนต่อเล็บและสวยงาม</span></p>
+        <div class="service-price">
+          <span class="price-num">฿200</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- Left side: 3 fingers (manicure) -->
+            <rect x="2"  y="20" width="7"  height="20" rx="3.5" fill="url(#g7)" opacity="0.72"/>
+            <rect x="11" y="14" width="8"  height="26" rx="4"   fill="url(#g7)" opacity="0.88"/>
+            <rect x="21" y="10" width="8"  height="30" rx="4"   fill="url(#g7)"/>
+            <!-- nail moons -->
+            <ellipse cx="5.5"  cy="22"  rx="2.5" ry="1.4" fill="rgba(255,255,255,0.28)"/>
+            <ellipse cx="15"   cy="16"  rx="2.8" ry="1.4" fill="rgba(255,255,255,0.28)"/>
+            <ellipse cx="25"   cy="12"  rx="2.8" ry="1.4" fill="rgba(255,255,255,0.28)"/>
+            <!-- Divider -->
+            <line x1="32" y1="8" x2="32" y2="50" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
+            <!-- Right side: 3 toes (pedicure) -->
+            <circle cx="37" cy="18" r="5"   fill="url(#g7)"/>
+            <circle cx="44" cy="22" r="4.5" fill="url(#g7)" opacity="0.88"/>
+            <circle cx="49" cy="29" r="3.5" fill="url(#g7)" opacity="0.72"/>
+            <!-- foot body suggestion -->
+            <path d="M33 34 Q34 28 37 24 Q41 30 46 34 Q48 42 47 50 L34 50 Z" fill="url(#g7)" opacity="0.45"/>
+            <!-- toe nail highlights -->
+            <ellipse cx="37" cy="16"  rx="2.8" ry="1.4" fill="rgba(255,255,255,0.3)"/>
+            <ellipse cx="44" cy="20"  rx="2.5" ry="1.4" fill="rgba(255,255,255,0.3)"/>
+            <ellipse cx="49" cy="27"  rx="2.0" ry="1.4" fill="rgba(255,255,255,0.3)"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Manicure &amp; Pedicure</span><span class="th">เล็บมือ &amp; เล็บเท้า</span></div>
+        <span class="service-name-th en">เล็บมือ &amp; เล็บเท้า</span>
+        <span class="service-name-th th">Hand &amp; Foot Nails</span>
+        <p class="service-desc"><span class="en">Complete hand and foot nail treatment — shape, polish, cuticle care, and a relaxing massage. Beautifully finished from fingertip to toe.</span><span class="th">ดูแลเล็บมือและเล็บเท้าครบวงจร ตกแต่ง ทาสี ดูแลหนังกำพร้า และนวดผ่อนคลาย สวยครบตั้งแต่ปลายนิ้วมือถึงนิ้วเท้า</span></p>
+        <div class="service-price">
+          <span class="price-num">฿400</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">
+          <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A84C"/><stop offset="50%" stop-color="#E8C97A"/><stop offset="100%" stop-color="#C9A84C"/></linearGradient></defs>
+            <!-- face outline -->
+            <ellipse cx="26" cy="24" rx="14" ry="17" fill="none" stroke="url(#g9)" stroke-width="2"/>
+            <!-- eyes closed in bliss -->
+            <path d="M18 20 Q20.5 18 23 20" fill="none" stroke="url(#g9)" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M29 20 Q31.5 18 34 20" fill="none" stroke="url(#g9)" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- serene smile -->
+            <path d="M21 29 Q26 33 31 29" fill="none" stroke="url(#g9)" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- massage flow lines radiating from face -->
+            <path d="M10 12 Q7 8 8 4" fill="none" stroke="url(#g9)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <path d="M6 22 Q2 20 1 16" fill="none" stroke="url(#g9)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            <path d="M42 12 Q45 8 44 4" fill="none" stroke="url(#g9)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <path d="M46 22 Q50 20 51 16" fill="none" stroke="url(#g9)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            <!-- glow sparkles -->
+            <path d="M26 4 L26.8 6.5 L29.5 7.3 L26.8 8.1 L26 10.5 L25.2 8.1 L22.5 7.3 L25.2 6.5 Z" fill="url(#g9)"/>
+            <circle cx="13" cy="6" r="1.5" fill="url(#g9)" opacity="0.6"/>
+            <circle cx="39" cy="6" r="1.5" fill="url(#g9)" opacity="0.6"/>
+            <!-- hair suggestion -->
+            <path d="M12 18 Q10 10 16 7 Q22 4 26 5 Q30 4 36 7 Q42 10 40 18" fill="none" stroke="url(#g9)" stroke-width="1.5" opacity="0.4"/>
+          </svg>
+        </span>
+        <div class="service-name"><span class="en">Facial Massage</span><span class="th">นวดหน้า</span></div>
+        <span class="service-name-th en">นวดหน้า</span>
+        <span class="service-name-th th">Face Massage</span>
+        <p class="service-desc"><span class="en">A deeply relaxing facial massage that lifts, de-puffs, and restores radiance. The perfect companion to any hair service.</span><span class="th">นวดหน้าผ่อนคลาย กระชับ ลดบวม และเสริมความเรืองรอง เข้ากันได้ดีกับทุกบริการทำผม</span></p>
+        <div class="service-price">
+          <span class="price-from"><span class="en">From</span><span class="th">เริ่มต้น</span></span>
+          <span class="price-num">฿350</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== GALLERY ====== -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-header fade-up">
+      <span class="section-tag"><span class="en">Our Work</span><span class="th">ผลงานของเรา</span></span>
+      <h2 class="section-title">
+        <span class="en">Transformations<br><em class="gold-text">We're Proud Of</em></span>
+        <span class="th">ผลลัพธ์ที่<br><em class="gold-text">เราภาคภูมิใจ</em></span>
+      </h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="gallery-grid fade-up">
+      <div class="gallery-item wide" style="min-height:280px;">
+        <img src="images/gallery-01.jpg" alt="Hair coloring - pink ombre" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;min-height:280px;"><span>Pink Ombre Color</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Pink Ombré</span></div>
+      </div>
+      <div class="gallery-item tall">
+        <img src="images/gallery-02.jpg" alt="Orange red balayage" style="min-height:400px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;min-height:400px;"><span>Red Balayage</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Red Balayage</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-03.jpg" alt="Silver gray short cut" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Silver Cut</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Silver Short</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-04.jpg" alt="Pink mauve long waves" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Mauve Long Waves</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Mauve Waves</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-05.jpg" alt="Caramel brown waves" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Caramel Waves</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Caramel Waves</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-06.jpg" alt="Dark brown ombre" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Dark Ombré</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Dark Ombré</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-07.jpg" alt="Ash brown long hair" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Ash Brown</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Ash Brown Waves</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery-08.jpg" alt="Silky keratin straight" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Keratin</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Keratin Straight</span></div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="images/gallery-09.jpg" alt="Blonde balayage curls" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Blonde Balayage</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Blonde Balayage</span></div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="images/gallery-10.jpg" alt="Sandy blonde straight" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Sandy Blonde</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Sandy Blonde Cut</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/model-01.jpg" alt="Caramel layered styling" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Caramel Style</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Caramel Layers</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/model-02.jpg" alt="Warm brown layered" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Warm Brown</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Warm Brown Layers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="about-section" id="about">
+    <div class="about-img fade-left">
+      <img class="about-img-main" src="images/salon-interior-1.jpg" alt="Lekkey Salon Interior" onerror="this.style.background='#1a1a1a'">
+      <div class="about-img-accent">
+        <img src="images/salon-interior-2.jpg" alt="Lekkey Salon" onerror="this.style.background='#222'">
+      </div>
+      <div class="about-badge">
+        <div class="about-badge-num">5★</div>
+        <div class="about-badge-text">Google</div>
+      </div>
+    </div>
+    <div class="about-content fade-right">
+      <span class="section-tag"><span class="en">Our Story</span><span class="th">เรื่องราวของเรา</span></span>
+      <h2 class="about-title">
+        <span class="en">Where Style<br>Meets <em class="gold-text">Heart</em></span>
+        <span class="th">ที่ที่สไตล์<br>พบกับ<em class="gold-text">หัวใจ</em></span>
+      </h2>
+      <div class="gold-line gold-line-left"></div>
+      <p class="about-text">
+        <span class="en">Lekkey Salon was born from a simple belief: that every person deserves to feel beautiful without having to spend a fortune. Nestled in Din Daeng, Bangkok, we've built a warm, welcoming studio where expert stylists treat every client like family.</span>
+        <span class="th">ร้าน Lekkey Salon เกิดจากความเชื่อที่ว่า ทุกคนสมควรรู้สึกสวยงามโดยไม่ต้องจ่ายแพง เราตั้งอยู่ในย่านดินแดง กรุงเทพฯ สไตลิสต์มืออาชีพของเราดูแลลูกค้าทุกคนเหมือนครอบครัว</span>
+      </p>
+      <p class="about-text">
+        <span class="en">With 166+ five-star Google reviews, our reputation speaks louder than words. Whether it's a bold colour transformation, a sleek keratin treatment, or a simple trim — we pour our passion into every appointment.</span>
+        <span class="th">ด้วยรีวิว 5 ดาวมากกว่า 166 รีวิวบน Google ชื่อเสียงของเราพูดแทนทุกอย่าง ไม่ว่าจะทำสีใหม่ เคราติน หรือตัดทรงง่ายๆ เราใส่ใจทุกนัดหมาย</span>
+      </p>
+      <div class="about-features">
+        <div class="feature-item">
+          <div class="feature-dot"></div>
+          <span class="feature-text en">Expert-trained stylists</span>
+          <span class="feature-text th">สไตลิสต์ผ่านการฝึกอบรม</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>
+          <span class="feature-text en">Premium quality products</span>
+          <span class="feature-text th">ผลิตภัณฑ์คุณภาพสูง</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>
+          <span class="feature-text en">Comfortable modern studio</span>
+          <span class="feature-text th">สตูดิโอสบายและทันสมัย</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>
+          <span class="feature-text en">Honest, transparent pricing</span>
+          <span class="feature-text th">ราคาโปร่งใส ไม่มีค่าใช้จ่ายซ่อนเร้น</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>
+          <span class="feature-text en">Open 7 days, 10 AM – 9 PM</span>
+          <span class="feature-text th">เปิด 7 วัน 10:00–21:00 น.</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-dot"></div>
+          <span class="feature-text en">LINE & walk-in welcome</span>
+          <span class="feature-text th">จองผ่าน LINE หรือ Walk-in ได้เลย</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== REVIEWS ====== -->
+  <section class="reviews-section" id="reviews">
+    <div class="reviews-inner">
+      <div class="reviews-header fade-up">
+        <div>
+          <span class="section-tag"><span class="en">What Clients Say</span><span class="th">เสียงจากลูกค้า</span></span>
+          <h2 class="section-title">
+            <span class="en">Loved by Bangkok,<br><em class="gold-text">Rated by All</em></span>
+            <span class="th">ลูกค้ากรุงเทพรัก<br><em class="gold-text">รีวิวโดยทุกคน</em></span>
+          </h2>
+        </div>
+        <div class="reviews-score">
+          <div class="reviews-big-num">5.0</div>
+          <div class="reviews-stars">
+            <div class="stars-row">★★★★★</div>
+            <div class="reviews-count">166+ Google Reviews</div>
+            <div class="reviews-platform">⭐ Perfect Score</div>
+          </div>
+        </div>
+      </div>
+      <div class="gold-line" style="margin-left:0; margin-bottom: 3rem;"></div>
+      <div class="reviews-grid fade-up">
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text en">"Came in for a colour and left absolutely obsessed. The stylist listened to exactly what I wanted and delivered something even better. Prices are super affordable for this level of quality!"</p>
+          <p class="review-text th">"มาทำสีแล้วชอบมากเลย ช่างฟังที่ต้องการและทำออกมาได้ดีกว่าที่คิด ราคาถูกมากสำหรับคุณภาพระดับนี้!"</p>
+          <div class="review-author">
+            <div class="review-avatar">P</div>
+            <div>
+              <div class="review-name">Ploy K.</div>
+              <div class="review-service en">Hair Coloring</div>
+              <div class="review-service th">ทำสีผม</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text en">"I've been doing keratin treatments here for a year. The results always last longer than anywhere else I've tried. The staff is so warm and the salon is clean and modern. My go-to in Bangkok!"</p>
+          <p class="review-text th">"ทำเคราตินที่นี่มาหนึ่งปีแล้ว ผลลัพธ์คงทนกว่าที่ไหน ช่างอัธยาศัยดีมาก ร้านสะอาดและทันสมัย ที่นี่คือร้านประจำของฉันในกรุงเทพ!"</p>
+          <div class="review-author">
+            <div class="review-avatar">N</div>
+            <div>
+              <div class="review-name">Narin T.</div>
+              <div class="review-service en">Keratin Treatment</div>
+              <div class="review-service th">เคราตินสด</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text en">"The nano spa bonding treatment completely transformed my hair. It went from dry and frizzy to silky smooth. The whole experience was so relaxing. Highly recommend!"</p>
+          <p class="review-text th">"สปาโนโนเปลี่ยนผมของฉันจากหยาบฟูเป็นเรียบลื่นมาก บรรยากาศผ่อนคลายมาก แนะนำมากๆ เลยค่ะ!"</p>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-name">Mint W.</div>
+              <div class="review-service en">Nano Spa Treatment</div>
+              <div class="review-service th">นาโน สปา</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coupon Banner -->
+      <div class="coupon-banner fade-up">
+        <div class="coupon-text">
+          <div class="section-tag" style="margin-bottom:0.3rem;">
+            <span class="en">Exclusive Offer</span><span class="th">โปรโมชั่นพิเศษ</span>
+          </div>
+          <div class="coupon-amount">฿100 <span style="font-size:1rem; font-family:'Raleway',sans-serif; color: var(--gray-light);">
+            <span class="en">OFF your next visit</span><span class="th">ลดทันทีในการเข้าครั้งถัดไป</span>
+          </span></div>
+          <p class="coupon-desc">
+            <span class="en">Valid for coloring, spa, straightening & nano spa treatments. Book via LINE to apply.</span>
+            <span class="th">ใช้ได้กับบริการทำสี สปา ดัดถาวร และนาโน สปา จองผ่าน LINE เพื่อใช้ส่วนลด</span>
+          </p>
+        </div>
+        <a href="https://line.me/ti/p/~lekkey41" target="_blank" class="btn-gold">
+          <span class="en">Claim on LINE</span>
+          <span class="th">รับโปรทาง LINE</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== BOOKING ====== -->
+  <section class="booking-section" id="booking">
+    <div class="section-header fade-up" style="text-align:left; margin-bottom:3rem;">
+      <span class="section-tag"><span class="en">Reserve Your Spot</span><span class="th">จองนัดหมาย</span></span>
+      <h2 class="section-title">
+        <span class="en">Book Your<br><em class="gold-text">Appointment</em></span>
+        <span class="th">จองนัด<br><em class="gold-text">ของคุณ</em></span>
+      </h2>
+      <div class="gold-line gold-line-left"></div>
+    </div>
+    <div class="booking-grid fade-up">
+      <div>
+        <p style="font-size:0.85rem; color: var(--gray-light); line-height:1.8; margin-bottom:2rem;">
+          <span class="en">Three easy ways to book — choose what works for you. We confirm all appointments within 30 minutes during opening hours.</span>
+          <span class="th">จองได้ 3 ช่องทาง เลือกแบบที่สะดวก เราจะยืนยันนัดภายใน 30 นาทีในเวลาทำการ</span>
+        </p>
+        <div class="booking-options">
+          <a href="https://line.me/ti/p/~lekkey41" target="_blank" class="book-option">
+            <div class="book-icon" style="background:#06C755; border-color:#06C755;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:white;">
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+              </svg>
+            </div>
+            <div class="book-info">
+              <div class="book-method">LINE</div>
+              <div class="book-detail">lekkey41</div>
+            </div>
+            <span class="book-arrow">→</span>
+          </a>
+          <a href="https://wa.me/66933582045" target="_blank" class="book-option">
+            <div class="book-icon" style="background:#25D366; border-color:#25D366;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:white;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+            </div>
+            <div class="book-info">
+              <div class="book-method">WhatsApp</div>
+              <div class="book-detail">093-358-2045</div>
+            </div>
+            <span class="book-arrow">→</span>
+          </a>
+          <a href="tel:+66658096571" class="book-option">
+            <div class="book-icon" style="background:rgba(201,168,76,0.12); border-color:rgba(201,168,76,0.4);">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:var(--gold);">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div class="book-info">
+              <div class="book-method"><span class="en">Phone Call</span><span class="th">โทรศัพท์</span></div>
+              <div class="book-detail">065-809-6571</div>
+            </div>
+            <span class="book-arrow">→</span>
+          </a>
+        </div>
+        <div class="hours-badge" style="margin-top:2rem;">
+          <div class="hours-title"><span class="en">Opening Hours</span><span class="th">เวลาทำการ</span></div>
+          <div class="hours-row"><span class="hours-day"><span class="en">Monday – Friday</span><span class="th">จันทร์ – ศุกร์</span></span><span class="hours-time">10:00 – 21:00</span></div>
+          <div class="hours-row"><span class="hours-day"><span class="en">Saturday – Sunday</span><span class="th">เสาร์ – อาทิตย์</span></span><span class="hours-time">10:00 – 21:00</span></div>
+          <div class="hours-row"><span class="hours-day"><span class="en">Public Holidays</span><span class="th">วันหยุดนักขัตฤกษ์</span></span><span class="hours-time">10:00 – 21:00</span></div>
+        </div>
+      </div>
+      <div class="booking-form">
+        <div class="form-title"><span class="en">Send a Message</span><span class="th">ส่งข้อความหาเรา</span></div>
+        <p class="form-sub"><span class="en">Fill in below and we'll confirm via LINE or phone.</span><span class="th">กรอกข้อมูลด้านล่าง เราจะยืนยันผ่าน LINE หรือโทรศัพท์</span></p>
+        <form onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label><span class="en">Full Name</span><span class="th">ชื่อ-นามสกุล</span></label>
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label><span class="en">Phone / LINE</span><span class="th">เบอร์โทร / LINE</span></label>
+              <input type="text" placeholder="065-xxx-xxxx" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label><span class="en">Service Interested In</span><span class="th">บริการที่ต้องการ</span></label>
+            <select>
+              <option value="">-- <span class="en">Select a service</span> --</option>
+              <option>Haircut & Styling / ตัดผม</option>
+              <option>Hair Coloring / ทำสีผม</option>
+              <option>Keratin Treatment / เคราติน</option>
+              <option>Straightening / ดัดถาวร</option>
+              <option>Nano Spa / นาโน สปา</option>
+              <option>Gel Nails / เล็บเจล</option>
+              <option>Manicure &amp; Pedicure / เล็บมือ &amp; เล็บเท้า</option>
+              <option>Facial Massage / นวดหน้า</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label><span class="en">Preferred Date</span><span class="th">วันที่ต้องการ</span></label>
+              <input type="date">
+            </div>
+            <div class="form-group">
+              <label><span class="en">Preferred Time</span><span class="th">เวลาที่ต้องการ</span></label>
+              <select>
+                <option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option>
+                <option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option>
+                <option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option>
+                <option>7:00 PM</option><option>8:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label><span class="en">Additional Notes</span><span class="th">หมายเหตุเพิ่มเติม</span></label>
+            <textarea placeholder="Hair type, reference photos, special requests..."></textarea>
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%; justify-content:center;">
+            <span class="en">Send Request</span>
+            <span class="th">ส่งคำขอ</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info fade-left">
+        <span class="section-tag"><span class="en">Find Us</span><span class="th">ที่ตั้ง</span></span>
+        <h2 class="section-title">
+          <span class="en">Visit the<br><em class="gold-text">Studio</em></span>
+          <span class="th">แวะมาที่<br><em class="gold-text">ร้านเรา</em></span>
+        </h2>
+        <div class="gold-line gold-line-left"></div>
+        <div class="contact-items">
+          <div class="contact-item">
+            <span class="contact-icon" style="background:rgba(201,168,76,0.1);">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:var(--gold);">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact-label"><span class="en">Address</span><span class="th">ที่อยู่</span></div>
+              <div class="contact-value">110 Chan Mueang 2 Alley,<br>Din Daeng, Bangkok 10400<br><span style="color:var(--gray); font-size:0.78rem;">Thailand</span></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon" style="background:rgba(201,168,76,0.1);">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:var(--gold);">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact-label"><span class="en">Phone</span><span class="th">โทรศัพท์</span></div>
+              <div class="contact-value"><a href="tel:+66658096571" style="color:var(--white);">065-809-6571</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon" style="background:#06C755;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:white;">
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact-label">LINE</div>
+              <div class="contact-value"><a href="https://line.me/ti/p/~lekkey41" target="_blank" style="color:var(--white);">lekkey41</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon" style="background:#25D366;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:white;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact-label">WhatsApp</div>
+              <div class="contact-value"><a href="https://wa.me/66933582045" target="_blank" style="color:var(--white);">093-358-2045</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon" style="background:rgba(201,168,76,0.1);">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill:var(--gold);">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact-label"><span class="en">Hours</span><span class="th">เวลาทำการ</span></div>
+              <div class="contact-value">
+                <span class="en">Open Daily · 10:00 AM – 9:00 PM</span>
+                <span class="th">เปิดทุกวัน · 10:00 – 21:00 น.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/p/Lekkey-Salon-61554446774391/" target="_blank" class="social-btn" title="Facebook">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/lekkeysalon" target="_blank" class="social-btn" title="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@lekkeysalon" target="_blank" class="social-btn" title="TikTok">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://line.me/ti/p/~lekkey41" target="_blank" class="social-btn" title="LINE" style="background:#06C755; border-color:#06C755; color:white;">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          </a>
+          <a href="https://wa.me/66933582045" target="_blank" class="social-btn" title="WhatsApp" style="background:#25D366; border-color:#25D366; color:white;">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="fade-right">
+        <div class="ken-burns-wrap">
+          <img src="images/storefront.jpg" alt="Lekkey Salon Exterior">
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?q=Lekkey+Salon+Din+Daeng+Bangkok&output=embed&hl=en"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <a href="https://www.google.com/maps/search/Lekkey+Salon+Din+Daeng+Bangkok/" target="_blank" class="btn-outline" style="margin-top:1rem; width:100%; justify-content:center;">
+          <span class="en">Open in Google Maps</span>
+          <span class="th">เปิดใน Google Maps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.jpg" alt="Lekkey Salon" style="width:34px;height:34px;object-fit:cover;border-radius:50%;border:1px solid rgba(201,168,76,0.3);">
+            Lekkey Salon
+          </div>
+          <p class="footer-desc en">Bangkok's most-loved neighbourhood hair studio. Because beautiful hair should be for everyone.</p>
+          <p class="footer-desc th">ร้านทำผมสุดฮิตในกรุงเทพฯ เพราะผมสวยควรเป็นของทุกคน</p>
+          <div class="social-links" style="margin-top:1.5rem;">
+            <a href="https://www.facebook.com/p/Lekkey-Salon-61554446774391/" target="_blank" class="social-btn" title="Facebook" style="width:36px;height:36px;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/lekkeysalon" target="_blank" class="social-btn" title="Instagram" style="width:36px;height:36px;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@lekkeysalon" target="_blank" class="social-btn" title="TikTok" style="width:36px;height:36px;">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title"><span class="en">Services</span><span class="th">บริการ</span></div>
+          <div class="footer-links">
+            <a href="#services"><span class="en">Haircut & Styling</span><span class="th">ตัดผม & สไตล์</span></a>
+            <a href="#services"><span class="en">Hair Coloring</span><span class="th">ทำสีผม</span></a>
+            <a href="#services"><span class="en">Keratin Treatment</span><span class="th">เคราตินสด</span></a>
+            <a href="#services"><span class="en">Straightening</span><span class="th">ดัดถาวร</span></a>
+            <a href="#services"><span class="en">Nano Spa</span><span class="th">นาโน สปา</span></a>
+            <a href="#services"><span class="en">Gel Nails</span><span class="th">เล็บเจล</span></a>
+            <a href="#services"><span class="en">Manicure &amp; Pedicure</span><span class="th">เล็บมือ &amp; เล็บเท้า</span></a>
+            <a href="#services"><span class="en">Facial Massage</span><span class="th">นวดหน้า</span></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title"><span class="en">Quick Links</span><span class="th">ลิงค์ด่วน</span></div>
+          <div class="footer-links">
+            <a href="#about"><span class="en">About Us</span><span class="th">เกี่ยวกับเรา</span></a>
+            <a href="#gallery"><span class="en">Gallery</span><span class="th">ผลงาน</span></a>
+            <a href="#reviews"><span class="en">Reviews</span><span class="th">รีวิว</span></a>
+            <a href="#booking"><span class="en">Book Now</span><span class="th">จองนัด</span></a>
+            <a href="#contact"><span class="en">Contact</span><span class="th">ติดต่อ</span></a>
+            <a href="https://www.gowabi.com/en/provider/lekkey-salon" target="_blank">GoWabi</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Lekkey Salon. <span class="en">All rights reserved.</span><span class="th">สงวนลิขสิทธิ์ทุกประการ</span></div>
+        <div class="footer-tagline">"<em>Because You Deserve The Best</em>"</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== JAVASCRIPT ====== -->
+  <script>
+    /* ---- Particles ---- */
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.top = Math.random() * 100 + '%';
+      p.style.animationDelay = Math.random() * 8 + 's';
+      p.style.animationDuration = (6 + Math.random() * 6) + 's';
+      p.style.width = p.style.height = (Math.random() * 3 + 1) + 'px';
+      container.appendChild(p);
+    }
+
+    /* ---- Nav scroll ---- */
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    /* ---- Scroll animations ---- */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => observer.observe(el));
+
+    /* ---- Language toggle ---- */
+    let currentLang = 'en';
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'th' : 'en';
+      document.body.classList.toggle('lang-th', currentLang === 'th');
+      document.querySelector('.lang-toggle').textContent = currentLang === 'en' ? 'ไทย / EN' : 'EN / ไทย';
+    }
+
+    /* ---- Mobile nav ---- */
+    function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); }
+    function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+    /* ---- Form ---- */
+    function handleForm(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.innerHTML;
+      btn.innerHTML = '<span>✓ Sent! We\'ll confirm soon.</span>';
+      btn.style.background = 'linear-gradient(135deg, #4a7c4a, #5a9c5a)';
+      setTimeout(() => { btn.innerHTML = original; btn.style.background = ''; }, 4000);
+    }
+
+    /* ---- Stagger service cards ---- */
+    document.querySelectorAll('.service-card').forEach((card, i) => {
+      card.style.transitionDelay = (i * 0.1) + 's';
+    });
+
+    /* ---- Fix ฿ symbol sizing everywhere ---- */
+    const bahtTargets = document.querySelectorAll('.price-num, .stat-num, .coupon-amount');
+    bahtTargets.forEach(el => {
+      el.innerHTML = el.innerHTML.replace(/฿/g, '<span class="baht">฿</span>');
+    });
+    // Also fix ฿ in description body text (slightly smaller, same font)
+    document.querySelectorAll('.service-desc').forEach(el => {
+      el.innerHTML = el.innerHTML.replace(/฿(\d)/g, '<span style="font-size:0.85em;">฿</span>$1');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Place your salon photos in this folder with these exact filenames:
+
+  hero.jpg             → Best salon interior or hero shot (wide/landscape)
+  gallery-01.jpg       → Pink ombre color work
+  gallery-02.jpg       → Red/orange balayage
+  gallery-03.jpg       → Silver/gray short cut
+  gallery-04.jpg       → Pink/mauve long waves
+  gallery-05.jpg       → Caramel brown waves
+  gallery-06.jpg       → Dark brown ombre
+  gallery-07.jpg       → Ash brown long hair
+  gallery-08.jpg       → Blonde bob/highlights
+  gallery-09.jpg       → Blonde balayage curls
+  salon-interior-1.jpg → Salon interior (About section)
+  salon-interior-2.jpg → Second interior shot (accent)
+
+Once images are placed here, they will automatically appear in the website.
+All images should ideally be JPG format, under 1MB each for fast loading.
