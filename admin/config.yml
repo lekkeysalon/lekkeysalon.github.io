@@ -1,0 +1,125 @@
+backend:
+  name: github
+  repo: lekkeysalon/lekkeysalon.github.io
+  branch: main
+  auth_type: pkce
+  app_id: REPLACE_WITH_GITHUB_OAUTH_APP_CLIENT_ID
+
+media_folder: images
+public_folder: images
+display_url: https://lekkeysalon.github.io
+site_url: https://lekkeysalon.github.io
+
+collections:
+
+  # ── PRICES, HOURS & CONTACT ──────────────────────────────────────────────
+  - name: site_content
+    label: "Site Content"
+    files:
+
+      - name: settings
+        label: "Prices, Hours & Contact"
+        file: content.json
+        fields:
+
+          - label: "Service Prices (฿)"
+            name: prices
+            widget: object
+            fields:
+              - label: "Haircut & Styling"
+                name: haircut
+                widget: string
+                hint: "Numbers only — e.g. 300"
+              - label: "Hair Coloring"
+                name: coloring
+                widget: string
+                hint: "Numbers only — e.g. 999"
+              - label: "Keratin Treatment"
+                name: keratin
+                widget: string
+                hint: "Numbers only — e.g. 1,599"
+              - label: "Straightening"
+                name: straightening
+                widget: string
+                hint: "Numbers only — e.g. 1,599"
+              - label: "Nano Spa Treatment"
+                name: nanoSpa
+                widget: string
+                hint: "Numbers only — e.g. 599"
+              - label: "Gel Nails"
+                name: gelNails
+                widget: string
+                hint: "Numbers only — e.g. 200"
+              - label: "Manicure & Pedicure"
+                name: manicurePedicure
+                widget: string
+                hint: "Numbers only — e.g. 400"
+              - label: "Facial Massage"
+                name: facialMassage
+                widget: string
+                hint: "Numbers only — e.g. 350"
+
+          - label: "Opening Hours"
+            name: hours
+            widget: object
+            fields:
+              - label: "Monday – Friday"
+                name: weekdays
+                widget: string
+                hint: "e.g. 10:00 – 21:00"
+              - label: "Saturday – Sunday"
+                name: weekend
+                widget: string
+                hint: "e.g. 10:00 – 21:00"
+              - label: "Public Holidays"
+                name: holidays
+                widget: string
+                hint: "e.g. 10:00 – 21:00"
+
+          - label: "Contact Info"
+            name: contact
+            widget: object
+            fields:
+              - label: "Phone (display)"
+                name: phone
+                widget: string
+                hint: "e.g. 065-809-6571"
+              - label: "Phone (link)"
+                name: phoneHref
+                widget: string
+                hint: "e.g. tel:+66658096571"
+              - label: "WhatsApp (display)"
+                name: whatsapp
+                widget: string
+                hint: "e.g. 093-358-2045"
+              - label: "WhatsApp (link)"
+                name: whatsappHref
+                widget: string
+                hint: "e.g. https://wa.me/66933582045"
+
+  # ── GALLERY ──────────────────────────────────────────────────────────────
+  - name: gallery
+    label: "Gallery"
+    files:
+
+      - name: gallery
+        label: "Gallery Photos"
+        file: gallery.json
+        fields:
+          - label: "Photos"
+            name: items
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - label: "Photo"
+                name: image
+                widget: image
+                hint: "Upload or choose a photo from the images folder"
+              - label: "Label (caption on hover)"
+                name: label
+                widget: string
+                hint: "e.g. Pink Ombré"
+              - label: "Alt text (for accessibility)"
+                name: alt
+                widget: string
+                hint: "Describe the photo briefly"

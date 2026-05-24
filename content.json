@@ -1,0 +1,23 @@
+{
+  "prices": {
+    "haircut": "300",
+    "coloring": "999",
+    "keratin": "1,599",
+    "straightening": "1,599",
+    "nanoSpa": "599",
+    "gelNails": "200",
+    "manicurePedicure": "400",
+    "facialMassage": "350"
+  },
+  "hours": {
+    "weekdays": "10:00 – 21:00",
+    "weekend": "10:00 – 21:00",
+    "holidays": "10:00 – 21:00"
+  },
+  "contact": {
+    "phone": "065-809-6571",
+    "phoneHref": "tel:+66658096571",
+    "whatsapp": "093-358-2045",
+    "whatsappHref": "https://wa.me/66933582045"
+  }
+}

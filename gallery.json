@@ -1,0 +1,20 @@
+{
+  "items": [
+    {"image": "images/gallery-01.jpg", "label": "Pink Ombré", "alt": "Hair coloring - pink ombre"},
+    {"image": "images/gallery-02.jpg", "label": "Red Balayage", "alt": "Orange red balayage"},
+    {"image": "images/gallery-03.jpg", "label": "Silver Short", "alt": "Silver gray short cut"},
+    {"image": "images/gallery-04.jpg", "label": "Mauve Waves", "alt": "Pink mauve long waves"},
+    {"image": "images/gallery-05.jpg", "label": "Caramel Waves", "alt": "Caramel brown waves"},
+    {"image": "images/gallery-06.jpg", "label": "Dark Ombré", "alt": "Dark brown ombre"},
+    {"image": "images/gallery-07.jpg", "label": "Ash Brown Waves", "alt": "Ash brown long hair"},
+    {"image": "images/gallery-08.jpg", "label": "Keratin Straight", "alt": "Silky keratin straight"},
+    {"image": "images/gallery-09.jpg", "label": "Blonde Balayage", "alt": "Blonde balayage curls"},
+    {"image": "images/gallery-10.jpg", "label": "Sandy Blonde Cut", "alt": "Sandy blonde straight"},
+    {"image": "images/model-01.jpg", "label": "Caramel Layers", "alt": "Caramel layered styling"},
+    {"image": "images/model-02.jpg", "label": "Warm Brown Layers", "alt": "Warm brown layered"},
+    {"image": "images/nail-01.jpg", "label": "Rose Chrome Gel", "alt": "Rose chrome gel nails"},
+    {"image": "images/nail-02.jpg", "label": "Classic Red Gel", "alt": "Classic red gel nails"},
+    {"image": "images/nail-03.jpg", "label": "Coral Peach Gel", "alt": "Coral peach gel nails"},
+    {"image": "images/nail-04.jpg", "label": "Sunshine Yellow Gel", "alt": "Sunshine yellow gel nails"}
+  ]
+}
