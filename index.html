@@ -36,7 +36,7 @@
     .gold { color: var(--gold); }
     .gold-text { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .serif { font-family: 'Cormorant Garamond', serif; }
-    .section-tag { font-family: 'Raleway', sans-serif; font-size: 0.6rem; letter-spacing: 0.55em; text-transform: uppercase; color: var(--gold); font-weight: 300; display: block; margin-bottom: 1rem; }
+    .section-tag { font-family: 'Raleway', sans-serif; font-size: 0.68rem; letter-spacing: 0.5em; text-transform: uppercase; color: var(--gold); font-weight: 400; display: block; margin-bottom: 1rem; }
     .btn-gold { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--gold-gradient); color: var(--black); font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.4rem; border: none; cursor: pointer; transition: all 0.3s ease; border-radius: 50px; }
     .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(201,168,76,0.45); }
     .btn-outline { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: var(--gold); font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.95rem 2.4rem; border: 1px solid var(--gold); cursor: pointer; transition: all 0.3s ease; border-radius: 50px; }
@@ -177,7 +177,7 @@
     .gallery-item:hover img { transform: scale(1.05); }
     .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.8) 0%, transparent 60%); opacity: 0; transition: opacity 0.4s ease; display: flex; align-items: flex-end; padding: 1.5rem; }
     .gallery-item:hover .gallery-overlay { opacity: 1; }
-    .gallery-label { font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 300; }
+    .gallery-label { font-family: 'Raleway', sans-serif; font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; font-weight: 400; text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
     .gallery-placeholder {
       width: 100%; min-height: 220px;
       background: linear-gradient(135deg, var(--dark2) 0%, var(--dark3) 100%);
@@ -291,8 +291,8 @@
     .contact-item { display: flex; gap: 1.2rem; }
     .contact-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .contact-icon svg { width: 20px; height: 20px; display: block; }
-    .contact-label { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); font-weight: 200; margin-bottom: 0.3rem; }
-    .contact-value { font-family: 'Raleway', sans-serif; font-size: 0.85rem; font-weight: 300; letter-spacing: 0.05em; color: var(--white); line-height: 1.7; }
+    .contact-label { font-family: 'Raleway', sans-serif; font-size: 0.64rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 0.3rem; }
+    .contact-value { font-family: 'Raleway', sans-serif; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.05em; color: #fff; line-height: 1.7; }
     .social-links { margin-top: 2.5rem; display: flex; gap: 1rem; }
     .social-btn { width: 42px; height: 42px; border: 1px solid rgba(201,168,76,0.25); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.1rem; transition: all 0.3s; border-radius: 50%; }
     .social-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
@@ -301,11 +301,11 @@
 
     /* ===== HOURS ===== */
     .hours-badge { margin-top: 2rem; background: rgba(201,168,76,0.05); border: 1px solid rgba(201,168,76,0.2); padding: 1.5rem 1.8rem; border-radius: 16px; }
-    .hours-title { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); font-weight: 300; margin-bottom: 0.8rem; }
-    .hours-row { display: flex; justify-content: space-between; font-family: 'Raleway', sans-serif; font-size: 0.75rem; font-weight: 200; letter-spacing: 0.06em; padding: 0.4rem 0; border-bottom: 1px solid rgba(201,168,76,0.08); }
+    .hours-title { font-family: 'Raleway', sans-serif; font-size: 0.64rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 0.8rem; }
+    .hours-row { display: flex; justify-content: space-between; font-family: 'Raleway', sans-serif; font-size: 0.8rem; font-weight: 300; letter-spacing: 0.06em; padding: 0.4rem 0; border-bottom: 1px solid rgba(201,168,76,0.08); }
     .hours-row:last-child { border-bottom: none; }
-    .hours-day { color: var(--gray-light); }
-    .hours-time { color: var(--gold); font-weight: 400; letter-spacing: 0.1em; }
+    .hours-day { color: #fff; }
+    .hours-time { color: var(--gold); font-weight: 500; letter-spacing: 0.1em; }
 
     /* ===== FOOTER ===== */
     footer {
@@ -823,6 +823,26 @@
         <div class="gallery-placeholder" style="display:none;"><span>Warm Brown</span></div>
         <div class="gallery-overlay"><span class="gallery-label">Warm Brown Layers</span></div>
       </div>
+      <div class="gallery-item">
+        <img src="images/nail-01.jpg" alt="Rose chrome gel nails" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Rose Chrome</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Rose Chrome Gel</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/nail-02.jpg" alt="Classic red gel nails" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Classic Red</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Classic Red Gel</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/nail-03.jpg" alt="Coral peach gel nails" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Coral Peach</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Coral Peach Gel</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/nail-04.jpg" alt="Sunshine yellow gel nails" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="gallery-placeholder" style="display:none;"><span>Sunshine Yellow</span></div>
+        <div class="gallery-overlay"><span class="gallery-label">Sunshine Yellow Gel</span></div>
+      </div>
     </div>
   </section>
 
@@ -1035,6 +1055,13 @@
           <div class="hours-row"><span class="hours-day"><span class="en">Monday – Friday</span><span class="th">จันทร์ – ศุกร์</span></span><span class="hours-time">10:00 – 21:00</span></div>
           <div class="hours-row"><span class="hours-day"><span class="en">Saturday – Sunday</span><span class="th">เสาร์ – อาทิตย์</span></span><span class="hours-time">10:00 – 21:00</span></div>
           <div class="hours-row"><span class="hours-day"><span class="en">Public Holidays</span><span class="th">วันหยุดนักขัตฤกษ์</span></span><span class="hours-time">10:00 – 21:00</span></div>
+          <div class="hours-row" style="margin-top:0.6rem; padding-top:0.6rem; border-top:1px solid rgba(201,168,76,0.15); border-bottom:none;">
+            <span class="hours-day" style="display:flex; align-items:center; gap:0.5rem;">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="var(--gold)" xmlns="http://www.w3.org/2000/svg"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+              <span class="en">Car Park Available</span><span class="th">มีที่จอดรถ</span>
+            </span>
+            <span class="hours-time" style="color:#fff; font-weight:300;">✓ Free</span>
+          </div>
         </div>
       </div>
       <div class="booking-form">
