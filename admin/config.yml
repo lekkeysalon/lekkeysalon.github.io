@@ -3,7 +3,7 @@ backend:
   repo: lekkeysalon/lekkeysalon.github.io
   branch: main
   auth_type: pkce
-  app_id: REPLACE_WITH_GITHUB_OAUTH_APP_CLIENT_ID
+  app_id: Ov23lipUNKYY4hi6L8P7
 
 media_folder: images
 public_folder: images
