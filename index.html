@@ -410,6 +410,56 @@
       .about-features { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
+
+    /* ===== MOBILE TYPOGRAPHY — readability pass ===== */
+    @media (max-width: 480px) {
+      html { font-size: 17px; }
+
+      /* Hero */
+      .hero-content { padding: 0 1.2rem; }
+      .hero-eyebrow { font-size: 0.65rem; font-weight: 300; letter-spacing: 0.35em; }
+      .hero-tagline { font-size: 0.95rem; font-weight: 300; line-height: 1.85; }
+      .hero-ctas { flex-direction: column; gap: 0.8rem; }
+      .hero-ctas .btn-gold, .hero-ctas .btn-outline { text-align: center; justify-content: center; }
+
+      /* Section labels */
+      .section-tag { font-size: 0.72rem; letter-spacing: 0.35em; }
+
+      /* Services */
+      .service-name-th { font-size: 0.7rem; font-weight: 300; letter-spacing: 0.2em; }
+      .service-desc { font-size: 0.88rem; font-weight: 300; line-height: 1.85; }
+
+      /* Gallery */
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.wide { grid-column: span 1; }
+      .gallery-label { font-size: 0.8rem; }
+
+      /* Hours & contact */
+      .hours-title { font-size: 0.72rem; letter-spacing: 0.25em; }
+      .hours-row { font-size: 0.9rem; font-weight: 300; }
+      .contact-label { font-size: 0.7rem; letter-spacing: 0.25em; }
+      .contact-value { font-size: 1rem; }
+
+      /* Form labels */
+      .form-group label { font-size: 0.68rem; font-weight: 400; letter-spacing: 0.2em; }
+      .form-title { font-size: 1.5rem; }
+
+      /* Reviews */
+      .review-text { font-size: 1.05rem; }
+
+      /* Buttons */
+      .btn-gold { font-size: 0.78rem; padding: 0.9rem 2rem; }
+      .btn-outline { font-size: 0.78rem; padding: 0.85rem 2rem; }
+
+      /* Booking section */
+      .book-option { padding: 1.2rem; }
+      .book-label { font-size: 0.72rem; }
+      .book-value { font-size: 1rem; }
+
+      /* Footer */
+      .footer-nav a { font-size: 0.78rem; }
+      .footer-copy { font-size: 0.78rem; }
+    }
   </style>
 </head>
 <body>
